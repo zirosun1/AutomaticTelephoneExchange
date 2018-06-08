@@ -8,5 +8,9 @@ namespace AutomaticTelephoneExchange.Interfaces
 {
     interface IATE
     {
+        void ConnectEventsForTerminal(ITerminal terminal);
+        void ConnectEventsForPort(IPort port);
+
+        
     }
 }

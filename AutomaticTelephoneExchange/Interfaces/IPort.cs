@@ -12,6 +12,8 @@ namespace AutomaticTelephoneExchange.Interfaces
         PortState State { get; set; }
 
         event EventHandler<PortState> ChangedState;
+        event EventHandler<PortState> ChangingState;
 
+        void ConnectEventsForTerminal(ITerminal terminal);
     }
 }
