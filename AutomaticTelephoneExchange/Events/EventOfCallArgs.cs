@@ -7,12 +7,21 @@ using AutomaticTelephoneExchange.Interfaces;
 
 namespace AutomaticTelephoneExchange.Events
 {
-    public class EventOfCallArgs : ICallEventArgs
+    public class EventOfCallArgs :EventArgs, ICallEventArgs
     {
-        public int Number => throw new NotImplementedException();
-
-        public int TargetNumber => throw new NotImplementedException();
-
-        public Guid Id => throw new NotImplementedException();
+        public int TargetNumber { get; private set; }
+        public int Number { get; private set; }
+        public Guid Id { get; private set; }
+        public EventOfCallArgs(int number, int target)
+        {
+            Number = number;
+            TargetNumber = target;
+        }
+        public EventOfCallArgs(int number, int target, Guid id)
+        {
+            Number = number;
+            TargetNumber = target;
+            Id = id;
+        }
     }
 }

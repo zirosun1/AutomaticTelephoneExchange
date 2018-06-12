@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using AutomaticTelephoneExchange.Interfaces;
 using AutomaticTelephoneExchange.Structs;
+using AutomaticTelephoneExchange.Events;
+using AutomaticTelephoneExchange.Enums;
 
 namespace AutomaticTelephoneExchange.Classes
 {
@@ -57,14 +59,14 @@ namespace AutomaticTelephoneExchange.Classes
         }
 
 
-        protected virtual void SafeEventOfAnswer(int targetNumber, StateOfCall stateOfCall, Guid id)
+        protected virtual void SafeEventOfAnswer(int targetNumber, CallState stateOfCall, Guid id)
         {
             if (EventOfAnswer != null)
             {
                 EventOfAnswer(this, new EventOfAnswerArgs(Number, targetNumber, stateOfCall, id));
             }
         }
-        public void Answer(int targetNumber, StateOfCall stateOfCall, Guid id)
+        public void Answer(int targetNumber, CallState stateOfCall, Guid id)
         {
             SafeEventOfAnswer(targetNumber, stateOfCall, id);
         }
@@ -81,7 +83,6 @@ namespace AutomaticTelephoneExchange.Classes
         }
 
 
-        //TestMethods
         public void TakeIncomingCall(object sender, EventOfCallArgs e)
         {
 
@@ -96,7 +97,7 @@ namespace AutomaticTelephoneExchange.Classes
                 {
                     flag = false;
                     Console.WriteLine();
-                    AnswerToCall(e.Number, StateOfCall.Answer, e.Id);
+                    AnswerToCall(e.Number, CallState.Answer, e.Id);
                 }
                 else if (k == 'N' || k == 'n')
                 {
@@ -111,7 +112,7 @@ namespace AutomaticTelephoneExchange.Classes
                 }
             }
         }
-        public void AnswerToCall(int target, StateOfCall state, Guid id)
+        public void AnswerToCall(int target, CallState state, Guid id)
         {
             SafeEventOfAnswer(target, state, id);
         }
@@ -119,7 +120,7 @@ namespace AutomaticTelephoneExchange.Classes
         {
             Id = e.Id;
             Console.WriteLine("He answered!!!");
-            if (e.StateOfCall == StateOfCall.Answer)
+            if (e.StateOfCall == CallState.Answer)
             {
                 Console.WriteLine("Terminal {0} have answered on call from terminal {1}", e.TargetNumber, e.Number);
             }

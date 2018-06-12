@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomaticTelephoneExchange.Interfaces
 {
-    interface ICallEventArgs
+  public  interface ICallEventArgs
     {
         int Number { get; }
         int TargetNumber { get; }

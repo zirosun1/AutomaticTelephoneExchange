@@ -7,7 +7,7 @@ using BilingSystem.Enums;
 
 namespace BilingSystem
 {
-    class Contract : IContract
+  public  class Contract : IContract
     {
             public Client Client { get; private set; }
             public int Number { get; private set; }

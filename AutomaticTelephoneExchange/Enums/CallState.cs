@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace AutomaticTelephoneExchange.Enums
 {
-   public enum PortState
+    public enum CallState
     {
-        Connect,
-        Disconnect,
-        Call
+        Answer,
+        Reject
     }
 }
