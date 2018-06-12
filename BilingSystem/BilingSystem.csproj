@@ -41,12 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BillingSystem.cs" />
+    <Compile Include="CallHandler.cs" />
     <Compile Include="CallHistory.cs" />
     <Compile Include="CallInfo.cs" />
     <Compile Include="CallRecord.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="Contract.cs" />
     <Compile Include="Enums\TypeOfCall.cs" />
+    <Compile Include="Enums\TypeOfSort.cs" />
     <Compile Include="Enums\TypeOfTariff.cs" />
     <Compile Include="IBillingSystem.cs" />
     <Compile Include="IContract.cs" />

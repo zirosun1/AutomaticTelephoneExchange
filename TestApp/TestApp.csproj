@@ -48,5 +48,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutomaticTelephoneExchange\AutomaticTelephoneExchange.csproj">
+      <Project>{6711c8bb-2732-4d26-82c4-54cc90215374}</Project>
+      <Name>AutomaticTelephoneExchange</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BilingSystem\BilingSystem.csproj">
+      <Project>{9c173cb6-26c6-4e31-b62e-57d0eb08ea40}</Project>
+      <Name>BilingSystem</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

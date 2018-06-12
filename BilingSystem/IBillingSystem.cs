@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilingSystem
 {
-    interface IBillingSystem
+    public interface IBillingSystem
     {
         CallHistory GetCallHistory(int Number);
     }
