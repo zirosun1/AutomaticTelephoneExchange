@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BilingSystem
 {
-    interface IData
+    public interface IData<T>
     {
+        IList<T> GetInformationList();
     }
 }

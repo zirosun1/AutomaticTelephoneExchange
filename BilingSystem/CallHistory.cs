@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace BilingSystem
 {
-    class CallHistory
+    public class CallHistory
     {
         public IList<CallRecord> CallRecords { get; private set; }
         public CallHistory()
         {
             CallRecords = new List<CallRecord>();
         }
-        public void AddRecordOfReport(CallRecord record)
+        public void AddCallRecord(CallRecord record)
         {
             CallRecords.Add(record);
         }

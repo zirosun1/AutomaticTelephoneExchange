@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace BilingSystem.Enums
 {
-    public enum TypeOfCall
+    public enum TypeOfTariff
     {
-        IncomingCall,
-        OutgoingCall
+        Mini,
+        Maxi
     }
 }

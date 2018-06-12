@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BilingSystem
 {
-    class Tariff
+   public class Tariff
     {
     }
 }

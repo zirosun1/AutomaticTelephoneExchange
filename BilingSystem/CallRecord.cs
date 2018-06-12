@@ -7,7 +7,7 @@ using BilingSystem.Enums;
 
 namespace BilingSystem
 {
-    class CallRecord
+    public class CallRecord
     {
         public TypeOfCall TypeOfCall { get; private set; }
         public int Number { get; private set; }

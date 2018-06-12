@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ATE.cs" />
+    <Compile Include="Classes\CallInfo.cs" />
     <Compile Include="Classes\Port.cs" />
     <Compile Include="Classes\Terminal.cs" />
     <Compile Include="Enums\PortState.cs" />
