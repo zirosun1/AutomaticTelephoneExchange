@@ -9,6 +9,7 @@ namespace BilingSystem.Enums
     public enum TypeOfTariff
     {
         Mini,
+        Midi,
         Maxi
     }
 }

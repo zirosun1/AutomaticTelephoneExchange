@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BilingSystem;
+using BilingSystem.Enums;
 
 namespace AutomaticTelephoneExchange.Interfaces
 {
-    interface IATE
+    public interface IATE : IData<CallInfo>
     {
-        void ConnectEventsForTerminal(ITerminal terminal);
-        void ConnectEventsForPort(IPort port);
-
-        
+        Terminal NewTerminal(IContract contract);
+        IContract SignContract(Client client, TypeOfTariff typeOfTariff);
+        void Calling(object sender, ICallEventArgs e);
     }
 }

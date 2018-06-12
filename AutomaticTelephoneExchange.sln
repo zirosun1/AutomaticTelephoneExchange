@@ -11,15 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BilingSystem", "BilingSystem\BilingSystem.csproj", "{9C173CB6-26C6-4E31-B62E-57D0EB08EA40}"
-	ProjectSection(ProjectDependencies) = postProject
-		{6711C8BB-2732-4D26-82C4-54CC90215374} = {6711C8BB-2732-4D26-82C4-54CC90215374}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{1E1DDACF-D0DE-4570-B08A-635D4908B7A1}"
-	ProjectSection(ProjectDependencies) = postProject
-		{9C173CB6-26C6-4E31-B62E-57D0EB08EA40} = {9C173CB6-26C6-4E31-B62E-57D0EB08EA40}
-		{6711C8BB-2732-4D26-82C4-54CC90215374} = {6711C8BB-2732-4D26-82C4-54CC90215374}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
